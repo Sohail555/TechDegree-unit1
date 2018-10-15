@@ -24,5 +24,3 @@ while guess != randon_number:
     attempt_count += 1
 
 print("You are correct")
-print("test")
-#this is a test

@@ -15,10 +15,13 @@ def start_game():
     print(name, "Are you ready!")
     print("HINT: The number is between 1 - 10")
 
-
-if __name__ == '__main__':
-    start_game()
-
+def scope():
+    if guess > int(10):
+        print("Please select a number between 1 - 10")
+    if guess  < int(1):
+        print("Please select a number between 1 - 10")
+restart = True
+start_game()
 guess = 0
 attempt_count = 0
 while guess != random_number:
@@ -27,19 +30,27 @@ while guess != random_number:
     except ValueError:
         print("Please enter a number")
         continue
-    if guess > 10 or guess < 1:
-        print("The number selected is outside the range")
-        print("Plese select the number between 1 - 10")
-
-    if random_number > guess:
+    if guess > int(10):
+        print("Please select a number between 1 - 10")
+        continue
+    if guess < int(1):
+        print("Please select a number between 1 - 10")
+        continif __name__ == '__main__':
+    start_game()ue
+    if  random_number > guess:
         print("The number is higher")
         attempt_count += 1
         continue
-
-    if random_number < guess:
+    if  random_number < guess:
         print("The number is lower")
         attempt_count += 1
         continue
-
-
+    if  play_again input("Do you want another chance (Y/N)"):
+        if play_again.lower == "y":
+            restart = True
+        else:
+            Break
 attempt()
+start_game()
+
+

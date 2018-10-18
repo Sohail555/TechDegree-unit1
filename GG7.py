@@ -2,6 +2,9 @@ import random
 
 random_number = int(random.randint(1, 10))
 
+attempts_record = []
+
+
 def attempt():
     if attempt_count == 1:
         print("You are correct, it took you 1 attempt.")
@@ -12,6 +15,10 @@ def start_game():
     print("Welcome to the Guessing Game!")
     name = input("Can I take your name challenger ")
     print(name, "You have to guess the correct number in the fewest attempts")
+    if len(attempts_record) <= 0:
+        print("There is currently no high score, it's yours for the taking!")
+    else:
+        print("The current high score is {} attempts".format(min(attempts_record)))
     print(name, "Are you ready!")
     print("HINT: The number is between 1 - 10")
 

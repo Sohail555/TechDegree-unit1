@@ -16,9 +16,8 @@ def start_game():
     print("HINT: The number is between 1 - 10")
 
 
-if __name__ == '__main__':
-    start_game()
 
+start_game()
 guess = 0
 attempt_count = 0
 while guess != random_number:
@@ -27,10 +26,6 @@ while guess != random_number:
     except ValueError:
         print("Please enter a number")
         continue
-    if guess > 10 or guess < 1:
-        print("The number selected is outside the range")
-        print("Plese select the number between 1 - 10")
-
     if random_number > guess:
         print("The number is higher")
         attempt_count += 1
